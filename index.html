@@ -3,6 +3,7 @@
 <title> tech_savvy </title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -10,22 +11,48 @@
 body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 
 body, html {
-  height: 100%;
-  line-height: 1.8;
+  height:100%;
+  line-height:1.8;
 }
 
 /* Full height image header */
 .bgimg-1 {
-  background-position: center;
-  background-size: cover;
+  background-position:center;
+  background-size:cover;
   background-image:url("logo.png");/*no image included*/
   background-color:black;
-  min-height: 90%;
+  min-height:100%;
 
 }
 
 .w3-bar .w3-button {
   padding: 16px;
+}
+
+/* DEMO-SPECIFIC STYLES */
+.typewriter h1 {
+  color: #fff;
+  font-family: monospace;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 30s steps(30, end),
+    blink-caret .5s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange }
 }
 
 </style>
@@ -34,7 +61,7 @@ body, html {
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
   <div class="w3-bar w3-white w3-card" id="myNavbar">
-    <a href="#home" class="w3-bar-item w3-button w3-wide"><b><h2><strong> Tech_savvy </strong></h2></b></a>
+    <a href="#home" class="w3-bar-item w3-button w3-wide"><b><h3><strong> Tech_savvy </strong></h3></b></a>
     <!-- Right-sided navbar links -->
     <div class="w3-right w3-hide-small">
       <a href="#Insights" class="w3-bar-item w3-button"><i class="fa fa-cog"></i> Insights</a>
@@ -46,10 +73,15 @@ body, html {
   </div>
 </div>
 
+<!--break rulers for proper positioning on mobile-view -->
+<br>
+<br>
+<br>
+<br>
 
 <!-- Header with full-height image -->
 <header class="bgimg-1 w3-display-container-firebrick w3-grayscale-min" id="home">
-  <div class="w3-display-left w3-text-white" style="padding:48px">
+  <div class="w3-display-left w3-text-white" style="padding:50px">
    <span class="w3-jumbo"><b> Welcome to #Mysite peeps! <b style="color:#fff44f"; class="fa fa-heart"> </b></span>
     <p><a href="#Insights" class="w3-button w3-white w3-padding-large w3-medium w3-margin-top w3-opacity w3-hover-opacity-off"><strong><font face color="black">Tap Me</font></strong></a></p>
   </div> 
@@ -62,7 +94,7 @@ body, html {
   <div class="w3-row-padding w3-center" style="margin-top:20px">
     <div class="w3-quarter">
       <b class="w3-margin-bottom w3-jumbo">&#128522;</b>
-      <p class="w3-large"><h3><b>Mayur D</b></h3></p>
+      <p class="h1"><h3><b>Mayur D</b></h3></p>
       <p> I love Developing Technology , <big>Programming </big> is in my DNA. </p>
     </div>
     <div class="w3-quarter">
@@ -102,13 +134,13 @@ body, html {
   <div class="w3-row-padding">
     <div class="w3-col m6">
       <h1><b>I know design.</b></h1>
-      <p> Cutting edge technology empowered with <mark>Machine learning</mark> , showing the Real time demand across the city during peak sessions. </p>
+      <p> I love in making concepts come to <mark>Reality</mark>  </p>
       <p><a href="#work" class="w3-button w3-black"><i class="fa fa-th"> </i> Our Team </a></p>
     </div>
-    <div class="w3-col m6">
-      <video style="float:right;" width="500" height="" controls>
-      <source src="table.mp4" type="video/mp4">
-      </video>
+    <div style="float:right" class="w3-col m6">
+       <video width="100%" height="100%" controls>
+           <source src="table.mp4" type="video/mp4">
+       </video>
     </div>
   </div>
 </div>
