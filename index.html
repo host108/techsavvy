@@ -17,15 +17,33 @@ body, html {
 /* Full height image header */
 .bgimg-1 {
   background-position: center;
-  background-color: black;
+  background: linear-gradient(to bottom, teal 0%, black 100%);
   background-size: cover;
-  background-image: url("C:\\Users\chethana\Documents\ai2.jpg");
   min-height: 100%;
 }
 
 .w3-bar .w3-button {
   padding: 16px;
 }
+
+html,body {
+  font-family: 'Raleway', sans-serif;
+  padding: 3em 0em;
+  font-size: 18px;
+  background: #222;
+  color: #aaa
+}
+
+h1,h2 {
+  font-weight: 200;
+  margin: 0.4em 0;
+}
+h1 { font-size: 3.5em; }
+h2 {
+  color: #888;
+  font-size: 2em;
+}
+
 </style>
 <body>
 
@@ -59,11 +77,20 @@ body, html {
   <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button"><b>CONTACT</b></a>
 </nav>
 
+<link href="https://fonts.googleapis.com/css?family=Raleway:200,100,400" rel="stylesheet" type="text/css" />
+<h1 style="padding-left: 2em;"> Artificial Intelligence is 
+  <span style="font-weight: bold; color: cyan;" 
+     class="txt-rotate"
+     data-period="2000"
+     data-rotate='[ "in our DNA.", "new Tech.", "Future.", "Productive.", "Love." ]'></span>
+</h1>
+
+
 <!-- Header with full-height image -->
 <header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
   <div class="w3-display-left w3-text-white" style="padding:48px">
-    <span class="w3-jumbo w3-hide-small">Artificial Intelligence is in our Mayur </span><br>
-    <span class="w3-xxlarge w3-hide-large w3-hide-medium">Artificial Intelligence is in our tech </span><br>
+    <span class="w3-jumbo w3-hide-small">Artificial Intelligence is in our DNA</span><br>
+    <span class="w3-xxlarge w3-hide-large w3-hide-medium">Artificial Intelligence is in our DNA</span><br>
     <span class="w3-large">an AI based animation content creating software to increase your productivity </span>
     <p><a href="#about" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Learn more and start</a></p>
   </div> 
@@ -383,6 +410,64 @@ function w3_open() {
 function w3_close() {
     mySidebar.style.display = "none";
 }
+
+var TxtRotate = function(el, toRotate, period) {
+  this.toRotate = toRotate;
+  this.el = el;
+  this.loopNum = 0;
+  this.period = parseInt(period, 10) || 2000;
+  this.txt = '';
+  this.tick();
+  this.isDeleting = false;
+};
+
+TxtRotate.prototype.tick = function() {
+  var i = this.loopNum % this.toRotate.length;
+  var fullTxt = this.toRotate[i];
+
+  if (this.isDeleting) {
+    this.txt = fullTxt.substring(0, this.txt.length - 1);
+  } else {
+    this.txt = fullTxt.substring(0, this.txt.length + 1);
+  }
+
+  this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+  var that = this;
+  var delta = 300 - Math.random() * 100;
+
+  if (this.isDeleting) { delta /= 2; }
+
+  if (!this.isDeleting && this.txt === fullTxt) {
+    delta = this.period;
+    this.isDeleting = true;
+  } else if (this.isDeleting && this.txt === '') {
+    this.isDeleting = false;
+    this.loopNum++;
+    delta = 500;
+  }
+
+  setTimeout(function() {
+    that.tick();
+  }, delta);
+};
+
+window.onload = function() {
+  var elements = document.getElementsByClassName('txt-rotate');
+  for (var i=0; i<elements.length; i++) {
+    var toRotate = elements[i].getAttribute('data-rotate');
+    var period = elements[i].getAttribute('data-period');
+    if (toRotate) {
+      new TxtRotate(elements[i], JSON.parse(toRotate), period);
+    }
+  }
+  // INJECT CSS
+  var css = document.createElement("style");
+  css.type = "text/css";
+  css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #666 }";
+  document.body.appendChild(css);
+};
+
 </script>
 
 </body>
