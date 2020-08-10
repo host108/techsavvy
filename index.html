@@ -1,7 +1,9 @@
-<html lang="en">
-<title> Tech_savvy </title>
-<!-- meta tag declarations for proper positioning of content both on web and mobile view-->
-      <meta charset="utf-8"/>
+<!DOCTYPE html>
+<html>
+<title>Teta | Home</title>
+
+<!-- meta tag declarations -->
+<meta charset="utf-8"/>
       <meta name="referrer" content="none" id="meta_referrer"/>
       <meta name="viewport" content="width=device-width, initial-scale=1 , maximum-scale=1 , minimum-scale=1 , user-scalable=no"/>
       <meta name="apple-mobile-web-app-capable" content="yes"/>
@@ -11,249 +13,258 @@
       <meta name="url" content="https://mayurhosting.github.io/techsavvy/">
       <meta http-equiv="cache-control" content="no-cache">
 
-<!-- external link declarations-->
-      <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- external links -->
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<!-- css style tag declarations below this -->      
-<style type="text/CSS">
+<!-- internal style declarations -->
+<style>
 body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 
 body, html {
-  height:100%;
-  line-height:1.8;
+  height: 100%;
+  line-height: 1.8;
 }
+
+/* Full height image header */
+.bgimg-1 {
+  background-position: center;
+  background: linear-gradient(to bottom, firebrick 0%, black 100%);
+  background-size: cover;
+  min-height: 100%;
+}
+
 .w3-bar .w3-button {
   padding: 16px;
 }
-/* header image animation */
-.element {
-  animation: pulse 2s infinite;
-  background-position:center;
-  background-size:cover;
-  background-image:url("logo.png");/* default image on force , as of now no image included*/
-   min-height:100%;
+
+html,body {
+  font-family: 'Raleway', sans-serif;
+  padding: 3em 0em;
+  font-size: 18px;
+  background: white; /*#222; */
+  color: black; /*#aaa */
 }
 
-#footer
-{
-  width:100%;
-  position:absolute;
-  background-color:black;
-  text-align:center;
-  text-decoration:none;
-  color:white;
+h2 {
+  font-weight: 200;
+  margin: 0.4em 0;
+}
+h2 { font-size: 3.5em; }
+h2 {
+  color: black; /* #888; */
+  font-size: 2em;
 }
 
-@keyframes pulse {
-  0% {
-    background: linear-gradient(to bottom, black 0%, black 100%);
-  }
-  /*50% {
-    background: linear-gradient(to bottom, black 0%, black 100%);
-  }*/
-  100% {
-    background: linear-gradient(to bottom, black 0%, black 100%);
-  }
-}
 </style>
-
 <body>
+
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
   <div class="w3-bar w3-white w3-card" id="myNavbar">
-    <a style="background: linear-gradient(to bottom, firebrick 0%, black 100%);" href="#home" class="w3-bar-item w3-button w3-wide"><h4 style="color:white;"><strong> Tech_savvy </strong></h4></a>
+    <a href="#home" class="w3-bar-item w3-button w3-wide w3-xxlarge"><b>Teta Softwares</b></a>
     <!-- Right-sided navbar links -->
     <div class="w3-right w3-hide-small">
-      <a href="#Insights" class="w3-bar-item w3-button"><i class="fa fa-cog"></i> Insights</a>
-      <a href="#Passion" class="w3-bar-item w3-button"><i class="fa fa-user"></i> Passion</a>
-      <a href="#My_Content" class="w3-bar-item w3-button"><i class="fa fa-heart"></i> My_Content</a>
-      <a href="#Portfolio" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> Portfolio </a>
+      <a href="#about" class="w3-bar-item w3-button"><b>ABOUT</b></a>
+      <a href="#team" class="w3-bar-item w3-button"><i class="fa fa-user"></i><b> TEAM</b></a>
+      <a href="#work" class="w3-bar-item w3-button"><i class="fa fa-th"></i><b> WORK</b></a>
+      <a href="#pricing" class="w3-bar-item w3-button"><i class="fa fa-usd"></i><b> PRICING</b></a>
+      <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i><b> CONTACT</b></a>
     </div>
+
+    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+      <i class="fa fa-bars"></i>
+    </a>
   </div>
 </div>
 
-<!-- place break rulers below for proper positioning on mobile-view , if needed -->
-  
-<!-- Header navigation -->
-<header class="element w3-display-container w3-grayscale-min" id="home">
-  <div class="w3-display-left w3-text-white" style="padding:50px">
-	  <span class="w3-xxlarge"><b style="color:white;"> Welcome to #Mysite peeps! </b><b style="color:cyan;" class="fa fa-heart"> </b></span>
-    <p><a href="#Insights" class="w3-button w3-white w3-padding-large w3-medium w3-margin-top  w3-hover-opacity-off"><strong><font face color="black">Tap Me</font></strong></a></p>
+<!-- Sidebar on small screens when clicking the menu icon -->
+<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">close</a>
+  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button"><b>ABOUT</b></a>
+  <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button"><b>TEAM</b></a>
+  <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button"><b>WORK</b></a>
+  <a href="#pricing" onclick="w3_close()" class="w3-bar-item w3-button"><b>PRICING</b></a>
+  <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button"><b>CONTACT</b></a>
+</nav>
+
+<!-- Main page font animation --> 
+<link href="https://fonts.googleapis.com/css?family=Raleway:200,100,400" rel="stylesheet" type="text/css" />
+<h2 style="padding-left: 40px;"><b> Artificial Intelligence is </b>
+  <span style="font-weight: bold; color: navy;" 
+     class="txt-rotate"
+     data-period="2000"
+     data-rotate='[ " in our DNA .", "new Tech .", "Future .", "Productive .", "Love ." ]'></span>
+</h2>
+
+<!-- Header with full-height image -->
+<header class="bgimg-1 w3-display-container" id="home">
+  <div class="w3-display-left w3-text-white" style="padding:48px">
+    <span class="w3-jumbo w3-hide-small"> Hey !! Budding Content creator </span><br>
+        <span class="w3-xxlarge w3-hide-large w3-hide-medium"><b> Hey Budding Content Creator !</b></span><br>
+    <span class="w3-large"> You have landed on the right page .... </span>
+    <p><a href="#about" class="w3-button w3-yellow w3-padding-large w3-large w3-margin-top w3-hover-opacity-off"><b> Tap me to explore! </b></a></p>
   </div> 
 </header>
 
 <!-- About Section -->
-<div class="w3-container-center" style="padding:120px 14px" id="Insights"><b>
-  <h1 class="w3-center"> About<b>.ME </b></h1>
-  <p style="color:red" class="w3-center w3-large">Insights</p>
-  
-              <div class="w3-row-padding w3-center" style="margin-top:20px">
-              <div class="w3-quarter">
-                <b class="w3-margin-bottom w3-jumbo">&#128513;</b>
-                 <p><h3><b>Mayur D</b></h3></p>
-                  <li>Developing Technology is My Passion</li>
-                  <li>I convert Coffee to Code { } </li>
-                  <li>Highly Motivated in Solving Problems</li>   
-              </div>
-
-              <div class="w3-quarter">
-               <b class="w3-margin-bottom w3-jumbo">&#128536;</b>
-                 <p class="w3-large"><h3><b>what I am</b></h3></p>
-                  <p> <li> Web Developer </li>
-                      <li> React native Developer </li>
-                      <li> Server Sided Scripting </li>
-                      <li> Machine learning Euthusiast </li> 
-                  </p>
-              </div>
-
-              <div class="w3-quarter">
-               <b class="w3-margin-bottom w3-jumbo">&#128584;</b>
-                 <p class="w3-large"><h3><b>what else I do</b></h3></p>
-                  <p> <li> Film Making { Script Design } </li>
-                       <li> Script Deployment </li>
-                       <li> Film Editing </li>
-                       <li> Adobe <b style="color:green">Ae</b> || Adobe <b style="color:purple">Pr</b> </li>
-                  </p>
-              </div>
-
-               <b class="w3-margin-bottom w3-jumbo">&#128170</b>
-                 <p class="w3-large"><h3><b>Productivity Enhancers</b></h3></p>
-                  <p> <li> Dolby Atmos SFX </li>
-                      <li> Epidemic Sounds </li>
-                      <li> Basic VFX </li>
-	          </p>
-              </div>
-  </div>
-
-<!-- surf section -->
-<div class="w3-container w3-row w3-center w3-black w3-padding-64" id="Passion">
-          <span style="font-size:100px;" class="w3-xlarge"> A Surf into My Couple of <font style="color:yellow;">Projects</font> &#128512;</span>
-</div>
-<br>
-	   <h3 style="padding-left:20px;"><b> Film Making Projects </b></h3>
-	<p><h5 style="padding:20px;"> Bringing Textual Concepts into Reality was the whole idea of unleashing the Creativity. Me 
-  and My team have always strived hard in Delivering the Best Possible Content.</h5></p>
-	<p style="padding:10px;color:red"> Disclaimer Note : </p>
-
-  <h6>
-	<p style="padding:10px;color:grey"> The Following Contents was created for "Educational and Entertainment Purpose" only.</p>
-	<p style="padding:10px;color:grey"> The Entire Script Design or Modifying Rights is enabled by "AM PRODUCTIONS". </p>
-	<p style="padding:10px;color:grey"> We dont hold "COPYRIGHTS" of any such - Covering Musics , Sound Effects , VFX Animations etc. Hence All Credits goes to the Respective Creators.</p>
-	<p style="padding:10px;color:grey"> The Characters shown , Representing companies of [ Any ] , Do not hold any Stake or Mutual Relationship with "THEM".</p>
-  </h6>
-
-<br>
-
-<!-- AM productions section -->
-<div class="w3-container w3-row w3-center w3-black w3-padding-64">
-    <span class="w3-xlarge"> <font style="color:yellow;"><small>about</small></font> . <b>' AM PRODUCTIONS '</b></span>
-    <p style="color:cyan"><font style="color:yellow;">AM</font> is not just a Name , Indeed a Bundle of Emotions which is evolving from 1 . 5+ years. We Develop and Execute Scripts from Scratch , Always making "Entertainment" as First Priority.
-    </p>
-                <p style="color:white;"> Founded By : Abinav [ Co-Founder ] and ME </p>  
-</div>
-
-<br>
-
-<!-- 1 Section - "Projects" -->
-<div class="w3-container w3-light-grey" style="padding:40px 16px">
-<br>
-  <div class="w3-row-padding">
-    <div class="w3-col m6">
-            <h3><b>1. Human Resource Management [ HRM ] </b></h3>
-            <p><h5><b> Topic assigned to us was <mark> Interview</mark> & we did this :) </b></p></h5>
-            <h6><p style="color:grey;"><b> Todays competitive world hunts for "Knowledge & Understanding" - Highlights of this Topic.</h6></p></b>
-            <small><p style="color:teal;"><b> Due to large storage size , following file has been uploaded on Google Drive which can be accessed below. </p></small></b>
-            <h6><p style="color:red;"><b> PS : Headphones needed for Better Sound Clarity. </b></p></h6>
-            <small><p style="color:green;"><b> Click this below button to watch! , Recommended to click more than once if not opened on first try. </b></p></small>
-            <p><a href="https://drive.google.com/open?id=1BlE1sgMHYCon45kU3GBv_i-G_0oSIElQ" class="w3-button w3-black"><i class="fa fa-google"> </i> Drive </a></p>
+<div class="w3-container" style="padding:128px 16px" id="about">
+  <h3 class="w3-center"><b>ABOUT OUR PRODUCT</b></h3>
+  <p class="w3-center w3-large"><font face style="color:firebrick;"><b>Insights</b></font></p>
+  <div class="w3-row-padding w3-center" style="margin-top:64px">
+    <div class="w3-quarter">
+      <i class="fa fa-desktop w3-margin-bottom w3-jumbo w3-center"></i>
+      <p class="w3-large"><b><mark> what are we </mark></b></p>
+      <p><b><font face style="color: navy;">TETA</font></b> is the <b>first AI based content creating software</b> that is designed to increase the efficiency & productivity of our users by reducing their time and efforts in manually creating content videos </p>
     </div>
-    <div style="float:right" class="w3-col m6">
-            <img src="hrm.jpeg" width="100%" onclick="onClick(this)" class="w3-hover-opacity" alt=" Human Resource Management ">
-            </img>
+    <div class="w3-quarter">
+      <i class="fa fa-heart w3-margin-bottom w3-jumbo"></i>
+      <p class="w3-large"><b><mark> what we do </mark></b></p>
+      <p> the answer is simple - Our <b> Intelligence Algorithm </b> carries on your task on behalf of us & strives its best to ensure it meets ur needs by giving <b>accurate predictions</b> </p>
+    </div>
+    <div class="w3-quarter">
+      <i class="fa fa-diamond w3-margin-bottom w3-jumbo"></i>
+      <p class="w3-large"><b><mark> how we do </mark></b></p>
+      <p> Technology is the king. we have deployed <b>cutting edge tech</b> in our front and back end systems to carry out all content creating tasks with <b>Ease , Speed and Productive</b> </p>
+    </div>
+    <div class="w3-quarter">
+      <i class="fa fa-cog w3-margin-bottom w3-jumbo"></i>
+      <p class="w3-large"><b><mark> other aspects </mark></b></p>
+      <p> the security of your <b>Data & Information</b> is our highest priority. we work round the clock to make sure our users have awesome experience in using our product. <b>Firewalls , Data Protection etc.</b> is implemented on every stages  </p>
     </div>
   </div>
 </div>
 
-<!-- 2 Section - "Projects" -->
-<div class="w3-container w3-light-grey" style="padding:20px 16px">
+<!-- Promo Section - "We know design" -->
+<div class="w3-container w3-light-grey" style="padding:128px 16px">
   <div class="w3-row-padding">
     <div class="w3-col m6">
-            <h3><b>2. Corporate Law & Administration [ CLA ]</b></h3>
-            <p><h5><b> Topic name = <mark> "Doctrine of Ultra Vires" </mark></b></h5></p>
-            <h6><p style="color:grey;"><b> A unique concept that focuses on Highlighting some of the Legal Laws that is Governing the Companies and the subsequent Consequences faced by Violating them.</h6></p></b>
-            <small><p style="color:teal;"><b> Due to large storage size , following file has been uploaded on Google Drive which can be accessed below. </p></small></b>
-            <h6><p style="color:red;"><b> PS : Headphones needed for Better Sound Clarity. </b></p></h6>
-            <small><p style="color:green;"><b> Click this below button to watch! , Recommended to click more than once if not opened on first try. </b></p></small>
-            <p><a href="https://drive.google.com/open?id=1Th0iiHXWm220aVezWwp1I7F2RVXyWYgq" class="w3-button w3-black"><i class="fa fa-google"> </i> Drive </a></p>
+      <h3><b> Core Components of our <big><font face style="color:firebrick;">Tech Stack</font></big></b></h3>
+      <li> Machine learning </li>
+      <li> Computer Visions </li>
+      <li> Deep learning and Patterns </li>
+      <li> Data Modelling and Graphic Illustrations </li>
+      <p><a href="#work" class="w3-button w3-black"><i class="fa fa-th"> </i> Explore More </a></p>
     </div>
-    <div style="float:right" class="w3-col m6">
-            <img src="cla.jpeg" width="100%" onclick="onClick(this)" class="w3-hover-opacity" alt=" Corporate Law & Administration ">
-            </img>
+    <div class="w3-col m6">
+      <img class="w3-image w3-round-large" src="programming.jpg" alt="programming" width="700" height="394">
     </div>
   </div>
 </div>
 
-<!-- 3 Section - "Projects" -->
-<div class="w3-container w3-light-grey" style="padding:20px 16px">
-  <div class="w3-row-padding">
-    <div class="w3-col m6">
-            <h3><b>3. Principles of Marketing [ POM ]</b></h3>
-            <h5><p><b>Topic OnBoard =  <mark>"Distribution Logistics and Sustainable Marketing"</mark></p></b></h5>
-            <h6><p style="color:grey;"><b> Marketing! Yup a Modern Day concept , the Highlightment of this Topic was Company's Progression , Competition and Survival in the Long Run. </h6></p></b>
-            <small><p style="color:teal;"><b> Due to large storage size , following file has been uploaded on Google Drive which can be accessed below. </p></small></b>
-            <h6><p style="color:red;"><b> PS : The following file is enabled with Dolby Atmos Sound Libraries , Headphones are Highly Recommended. </b></p></h6>
-            <small><p style="color:green;"><b> Click this below button to watch! , Recommended to click more than once if not opened on first try. </b></p></small>
-            <p><a href="https://drive.google.com/open?id=19kFU0o0tUhcCPNs1QohZiMQ1CdVT5fZ7" class="w3-button w3-black"><i class="fa fa-google"> </i> Drive </a></p>
+<!-- Team Section -->
+<div class="w3-container" style="padding:128px 16px" id="team">
+  <h2 class="w3-center"><b>What Our Clients Tell About Us</b></h2>
+  <p class="w3-center w3-large"><font face style="color: firebrick;"><b> Feedbacks from our Loved ones </b></font></p>
+  <div class="w3-row-padding w3-grayscale" style="margin-top:64px">
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-card">
+        <img src="/w3images/team2.jpg" alt="John" style="width:100%">
+        <div class="w3-container">
+          <h3><b>John D souza</b></h3>
+          <p><font face style="color: firebrick;"><b> CEO - Quintype Technologies </b></font></p>
+          <p><b>TETA</b> is a must need product for every business to ease the task of creating digital contents </p>
+          <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
+        </div>
+      </div>
     </div>
-    <div style="float:right" class="w3-col m6">
-            <img src="pom.jpeg" width="100%" onclick="onClick(this)" class="w3-hover-opacity" alt=" Distribution Logistics & Sustainable Marketing ">
-            </img>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-card">
+        <img src="/w3images/team1.jpg" alt="Jane" style="width:100%">
+        <div class="w3-container">
+          <h3><b>Anja Doe</b></h3>
+          <p><b><font face style="color:firebrick;"> Director - Indiqube Technologies </font></b></p>
+          <p> A handy product with an awesome UI , drastically reduces the long time taken manually to design animations </p>
+          <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-card">
+        <img src="/w3images/team3.jpg" alt="Mike" style="width:100%">
+        <div class="w3-container">
+          <h3><b>Mike Ross</b></h3>
+          <p><b><font face style="color:firebrick;"> Web Designer - Uber Inc </font></b></p>
+          <p> Automation is the best part of this tool , Content gets created in just few minutes which rather takes hours when done manually </p>
+          <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-card">
+        <img src="/w3images/team4.jpg" alt="Dan" style="width:100%">
+        <div class="w3-container">
+          <h3><b>Dan Star</b></h3>
+          <p font face style="color: firebrick;"><b> Developer Advocate - Microsoft Ltd </b></p>
+          <p> a magical and mystical product that every company of present generation needs. Get Your Content video created by just typing the words and uploading the sound - cool right? </p>
+          <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
+        </div>
+      </div>
     </div>
   </div>
 </div>
 
-<!-- prospects section -->
-<div class="w3-container" style="padding:128px 16px" id="My_Content">
-  <h2 class="w3-center"><b><mark style="background-color:white;padding:4px;"><font style="color:black;">{ Other Prospects }</font></mark></b></h2>
-  <br>
-  <p class="w3-center w3-large"><h4><b style="border:2px solid teal;padding:4px;padding-left:10px;">AM Technologies Pvt Ltd </b></h4></p>
-  <h5><p> Kudos to 2020! , A great start off year from our team. We deliberately planned and laid down the successful foundation of our start-up business idea that was popping up from many days. <b>Our App based Product and Service <mark> table.Ai </mark></b> , A Scratch idea that focuses on present world demand for <b>Booking Seatings at Restaurants.</b></p></h5>
-  <br>
-  <center>
-  <h5><i><b> ' Be it a Corporate Meeting or Date with your Mate! ,</i> <mark> table.Ai</mark><i> is always your check out Gate '</b></i></h5></center>
-  <h3><p><b style="padding-left:10px;"><mark style="background-color:black;padding:6px;"><font style="color:white;"> A Little Insights </font></mark></b></p></h3>
-  <h6><p><li style="padding:10px;"> { <b style="color: firebrick;">Data</b> } is our <b style="color:blue">D</b><b style="color:darkgreen">N</b><b style="color:red">A</b> , Powering entire system by <b>Artificial Intelligence</b> is our core objective. </li>
-            <li style="padding:10px;"> Our <b style="color: navy;"> Machine Learning Algorithm Models </b> are trained to carry out predictions and estimate real time demand providing consistent accurate information.</li>
-            <li style="padding:10px;"> Application Softwares are developed using " <b style="color:darkgreen">React.js</b> " and " <b style="color:darkgreen">Angular.js</b> " supporting both Cross <b>OS Platforms</b> and consistently reducing the APK size. </li>
-            <li style="padding:10px;"> Empowering various <b>API's</b> into our system to make our Business Model a less hassle free. </li>
-  </p></h6>
+<!-- Promo Section "Statistics" -->
+<div class="w3-container w3-row w3-center w3-dark-grey w3-padding-64">
+  <div class="w3-quarter">
+    <b>
+    <span class="w3-xxlarge">1</span>
+    <br>Sign Up
+  </div>
+  <div class="w3-quarter">
+    <span class="w3-xxlarge">2</span>
+    <br>Choose a Template and Sound from our Cloud
+  </div>
+  <div class="w3-quarter">
+    <span class="w3-xxlarge">3</span>
+    <br>Drop texts that you need
+  </div>
+  <div class="w3-quarter">
+    <span class="w3-xxlarge">4</span>
+    <br>Boom!! your all done , Our AI will Auto Create the Content
+  </div>
+</div>
+</b>
 
-<center>
-  <div class="w3-container w3-light-grey" style="padding:20px 16px">
-  <div class="w3-row-padding">
-    <div class="w3-col m6">
-	    <h5><b> Promotional Content </b></h5>
-            <video width="100%" controls>
-            <source src="table.mp4" type="video/mp4">
-            </video>
-  </div>
-  </div>
-  <br>
-    </div>
-  <div class="w3-container w3-light-grey" style="padding:20px 16px">
-  <div class="w3-row-padding">
-    <div class="w3-col m6">
-	    <h5><b> Company Trademark </b></h5>
-            <img src="logo.png" style="width:100% ;" onclick="onClick(this)" class="w3-hover-opacity" alt=" AM Technologies Pvt Ltd ">
-            </img>
-  </div>
-  </div>
-    </div>
-</center>
+<!-- Work Section -->
+<div class="w3-container" style="padding:128px 16px" id="work">
+  <h3 class="w3-center">OUR WORK</h3>
+  <p class="w3-center w3-large">What we've done for people</p>
 
-<!-- Modal js code for full size images on click -->
+  <div class="w3-row-padding" style="margin-top:64px">
+    <div class="w3-col l3 m6">
+      <img src="/w3images/tech_mic.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A microphone">
+    </div>
+    <div class="w3-col l3 m6">
+      <img src="/w3images/tech_phone.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A phone">
+    </div>
+    <div class="w3-col l3 m6">
+      <img src="/w3images/tech_drone.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A drone">
+    </div>
+    <div class="w3-col l3 m6">
+      <img src="/w3images/tech_sound.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Soundbox">
+    </div>
+  </div>
+
+  <div class="w3-row-padding w3-section">
+    <div class="w3-col l3 m6">
+      <img src="/w3images/tech_tablet.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A tablet">
+    </div>
+    <div class="w3-col l3 m6">
+      <img src="/w3images/tech_camera.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A camera">
+    </div>
+    <div class="w3-col l3 m6">
+      <img src="/w3images/tech_typewriter.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A typewriter">
+    </div>
+    <div class="w3-col l3 m6">
+      <img src="/w3images/tech_tableturner.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A tableturner">
+    </div>
+  </div>
+</div>
+
+<!-- Modal for full size images on click-->
 <div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
   <span class="w3-button w3-xxlarge w3-black w3-padding-large w3-display-topright" title="Close Modal Image">×</span>
   <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
@@ -262,86 +273,211 @@ body, html {
   </div>
 </div>
 
-<!-- portfolio section -->
-<div class="w3-container-center" style="padding:60px 40px" id="Portfolio">
-  <h1 class="w3-center"><mark style="background-color:firebrick;color:white"> #My Portfolio </mark></h1>
-  <div class="w3-row-padding"  style="margin-top:64px;">
-
-<center>                                            
-<div class="w3-col l3 m6 w3-margin-bottom">                                                             
-      <div class="w3-card">
-        <img src="dm.jpg" class="w3-square-xxlarge" alt="Mayur" style="width:100%;">
-        <div style="width:100%;" class="w3-container">
-		<h1><b> Mayur </b></h1>
-          <p> <big> Me! 19 years old , In thirst of Gaining Knowledge with a simple core objective of Deploying Effective Leadership skills that would eventually lead towards Specialisation. </big></p>
-          <p><a href="#Contact" style="text-decoration:none;"><button class="w3-button w3-dark-grey w3-block"><i class="fa fa-envelope"></i> Contact </button></p></a>
-        </div>
-      </div>
-    </div>
-</center>
-   </div>
-   </div>
-                                                                                    
 <!-- Skills Section -->
 <div class="w3-container w3-light-grey w3-padding-64">
   <div class="w3-row-padding">
     <div class="w3-col m6">
-      <h3><strong> No one is Perfect > </strong></h3>
-      <h1 style="color:#800000"><strong> So am I </strong></h1>
-      <p> I do make mistakes , but everytime I strive hard to never repeat them again. </p>
-      <p> Relevant level of skills that I possess in understanding these various Scripting & Programming Languages. </p>
+      <h3>Our Skills.</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br>
+      tempor incididunt ut labore et dolore.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br>
+      tempor incididunt ut labore et dolore.</p>
     </div>
     <div class="w3-col m6">
-      <p class="w3-wide"><i class="fa fa-diamond w3-margin-right"></i> HTML , CSS , Java Script </p>
-      <div class="w3-red">
-        <div class="w3-container w3-dark-grey w3-center" style="width:70%">70%</div>
+      <p class="w3-wide"><i class="fa fa-camera w3-margin-right"></i>Photography</p>
+      <div class="w3-grey">
+        <div class="w3-container w3-dark-grey w3-center" style="width:90%">90%</div>
       </div>
-      <p class="w3-wide"><i class="fa fa-star w3-margin-right"></i> PHP & MySql </p>
-      <div class="w3-yellow">
-        <div class="w3-container w3-dark-grey w3-center" style="width:50%">50%</div>
+      <p class="w3-wide"><i class="fa fa-desktop w3-margin-right"></i>Web Design</p>
+      <div class="w3-grey">
+        <div class="w3-container w3-dark-grey w3-center" style="width:85%">85%</div>
       </div>
-      <p class="w3-wide"><i class="fa fa-code w3-margin-right"></i> Python </p>
-      <div class="w3-green">
-        <div class="w3-container w3-dark-grey w3-center" style="width:40%">40%</div>
-      </div>
-      <p class="w3-wide"><i class="fa fa-cogs w3-margin-right"></i> Bootstrap Frameworks </p>
-      <div class="w3-orange">
-        <div class="w3-container w3-dark-grey w3-center" style="width:50%">50%</div>
-      </div>
-      <p class="w3-wide"><i class="fa fa-hashtag w3-margin-right"></i> React.js | Node.js | Angular.js </p>
-      <div class="w3-blue">
-        <div class="w3-container w3-dark-grey w3-center" style="width:40%">40%</div>
+      <p class="w3-wide"><i class="fa fa-photo w3-margin-right"></i>Photoshop</p>
+      <div class="w3-grey">
+            <div class="w3-container w3-dark-grey w3-center" style="width:75%">75%</div>
       </div>
     </div>
   </div>
 </div>
+
+<!-- Pricing Section -->
+<div class="w3-container w3-center w3-dark-grey" style="padding:128px 16px" id="pricing">
+  <h3>OUR PRICING</h3>
+  <p class="w3-large"> choose a plan that meets your convenience </p>
+  <div class="w3-row-padding" style="margin-top:64px">
+    <div class="w3-third w3-section">
+      <ul class="w3-ul w3-white w3-hover-shadow">
+        <li class="w3-black w3-xlarge w3-padding-32">Basic</li>
+        <li class="w3-padding-16"><b>10 GB</b> Storage</li>
+        <li class="w3-padding-16"><b></b> Limited Sound Cloud Access </li>
+        <li class="w3-padding-16"><b>10</b> Domains</li>
+        <li class="w3-padding-16"><b>Endless</b> Support</li>
+        <li class="w3-padding-16">
+          <h2 class="w3-wide">$ 10</h2>
+          <span class="w3-opacity">per month</span>
+        </li>
+        <li class="w3-light-grey w3-padding-24">
+          <button class="w3-button w3-black w3-padding-large">Sign Up</button>
+        </li>
+      </ul>
+    </div>
+    <div class="w3-third">
+      <ul class="w3-ul w3-white w3-hover-shadow">
+        <li class="w3-red w3-xlarge w3-padding-48">Pro</li>
+        <li class="w3-padding-16"><b>25GB</b> Storage</li>
+        <li class="w3-padding-16"><b>25</b> Emails</li>
+        <li class="w3-padding-16"><b>25</b> Domains</li>
+        <li class="w3-padding-16"><b>Endless</b> Support</li>
+        <li class="w3-padding-16">
+          <h2 class="w3-wide">$ 25</h2>
+          <span class="w3-opacity">per month</span>
+        </li>
+        <li class="w3-light-grey w3-padding-24">
+          <button class="w3-button w3-black w3-padding-large">Sign Up</button>
+        </li>
+      </ul>
+    </div>
+    <div class="w3-third w3-section">
+      <ul class="w3-ul w3-white w3-hover-shadow">
+        <li class="w3-black w3-xlarge w3-padding-32">Premium</li>
+        <li class="w3-padding-16"><b>50GB</b> Storage</li>
+        <li class="w3-padding-16"><b>50</b> Emails</li>
+        <li class="w3-padding-16"><b>50</b> Domains</li>
+        <li class="w3-padding-16"><b>Endless</b> Support</li>
+        <li class="w3-padding-16">
+          <h2 class="w3-wide">$ 50</h2>
+          <span class="w3-opacity">per month</span>
+        </li>
+        <li class="w3-light-grey w3-padding-24">
+          <button class="w3-button w3-black w3-padding-large">Sign Up</button>
+        </li>
+      </ul>
+    </div>
+  </div>
 </div>
 
 <!-- Contact Section -->
-<div class="w3-container w3-light-grey" style="padding:60px 16px" id="Contact">
-	<h2 class="w3-center"><b>CONTACT ME</b></h2>
-  <p class="w3-center w3-large"><h4> <b style="color:grey"> { </b> Have any budding idea. <b style="color:#0000CC"> Lets Implement it Together! </b> <b style="color:grey"> } </b></h4></p>
-  <div style="margin-top:30px">
-    <h5><p><i class="fa fa-envelope fa-fw w3-xlarge w3-margin-right"></i><b> Email : mayurtech009@gmail.com</b></h5></p>
-    <h4><p><b> Also connect me on : </b><a href="https://www.linkedin.com/in/mayur-d" target="blank"><b style="color:#38A1F3;"><i class="fa fa-linkedin"></i></b></a> | <a href="https://www.twitter.com/@Mayur83315559" target="blank"><b style="color:#38A1F3;"><i class="fa fa-twitter"></i></b></a></p></h4></b>
-      </div></div>
-
-<!-- footer section --> 
-<div id="footer">
-  <h6><b> &copy; 2020 , All Rights Reserved </b></h6>
-  <b> made with &#128157; </b> | <!-- hitwebcounter Code START -->
-<img src="https://hitwebcounter.com/counter/counter.php?page=7192540&style=0007&nbdigits=4&type=page&initCount=0" title="Free-Counter" Alt="hitwebcounter"   border="0" >                                    
-                                                                                                                                              
+<div class="w3-container w3-light-grey" style="padding:128px 16px" id="contact">
+  <h3 class="w3-center">CONTACT US</h3>
+  <p class="w3-center w3-large"> we would love to hear from you. Send us a message:</p>
+  <div style="margin-top:48px">
+    <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Bangalore, India </p>
+    <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: +91 6360580387 </p>
+    <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: tetasoftwaresblr@gmail.com </p>
+    <br>
+    <form action="/action_page.php" target="_blank">
+      <p><input class="w3-input w3-border" type="text" placeholder="Name" required name="Name"></p>
+      <p><input class="w3-input w3-border" type="text" placeholder="Email" required name="Email"></p>
+      <p><input class="w3-input w3-border" type="text" placeholder="Subject" required name="Subject"></p>
+      <p><input class="w3-input w3-border" type="text" placeholder="Message" required name="Message"></p>
+      <p>
+        <button class="w3-button w3-black" type="submit">
+          <i class="fa fa-paper-plane"></i> SEND MESSAGE
+        </button>
+      </p>
+    </form>
+    <!-- Image of location/map -->
+    <img src="/w3images/map.jpg" class="w3-image w3-greyscale" style="width:100%;margin-top:48px">
+  </div>
 </div>
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-64">
+  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  <div class="w3-xlarge w3-section">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+  </div>
+  <p> &copy; 2020 Teta Softwares Pvt Ltd , All Rights Reserved </p>
+</footer>
+
+<!-- Javascript Declarations --> 
 <script>
-//Modal code for gallery
+// Modal Image Gallery
 function onClick(element) {
   document.getElementById("img01").src = element.src;
   document.getElementById("modal01").style.display = "block";
   var captionText = document.getElementById("caption");
   captionText.innerHTML = element.alt;
 }
+
+
+// Toggle between showing and hiding the sidebar when clicking the menu icon
+var mySidebar = document.getElementById("mySidebar");
+
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+  } else {
+    mySidebar.style.display = 'block';
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+    mySidebar.style.display = "none";
+}
+
+var TxtRotate = function(el, toRotate, period) {
+  this.toRotate = toRotate;
+  this.el = el;
+  this.loopNum = 0;
+  this.period = parseInt(period, 10) || 2000;
+  this.txt = '';
+  this.tick();
+  this.isDeleting = false;
+};
+
+TxtRotate.prototype.tick = function() {
+  var i = this.loopNum % this.toRotate.length;
+  var fullTxt = this.toRotate[i];
+
+  if (this.isDeleting) {
+    this.txt = fullTxt.substring(0, this.txt.length - 1);
+  } else {
+    this.txt = fullTxt.substring(0, this.txt.length + 1);
+  }
+
+  this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+  var that = this;
+  var delta = 300 - Math.random() * 100;
+
+  if (this.isDeleting) { delta /= 2; }
+
+  if (!this.isDeleting && this.txt === fullTxt) {
+    delta = this.period;
+    this.isDeleting = true;
+  } else if (this.isDeleting && this.txt === '') {
+    this.isDeleting = false;
+    this.loopNum++;
+    delta = 500;
+  }
+
+  setTimeout(function() {
+    that.tick();
+  }, delta);
+};
+
+window.onload = function() {
+  var elements = document.getElementsByClassName('txt-rotate');
+  for (var i=0; i<elements.length; i++) {
+    var toRotate = elements[i].getAttribute('data-rotate');
+    var period = elements[i].getAttribute('data-period');
+    if (toRotate) {
+      new TxtRotate(elements[i], JSON.parse(toRotate), period);
+    }
+  }
+  // INJECT CSS
+  var css = document.createElement("style");
+  css.type = "text/css";
+  css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #666 }";
+  document.body.appendChild(css);
+};
+
 </script>
-<!-- end of scripting -->
+
 </body>
 </html>
